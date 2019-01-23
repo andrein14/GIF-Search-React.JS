@@ -9,7 +9,7 @@ export default class SearchForm extends Component {
   }
   
   onSearchChange = e => {
-    if(e.target.value.length>3&& (Date.now()- this.state.data>2000)){
+    if(e.target.value.length>2&& (Date.now()- this.state.data>2000)){
       this.props.handler(e.target.value);
       this.setState({data: Date.now()});
 
